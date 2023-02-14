@@ -74,6 +74,7 @@ def sender(mgroup):
         time_now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         mcast_msg = message + ': ' + time_now
         print('Sending to ' + mgroup + ' (TTL ' + str(mttl) + '): ' + mcast_msg)
+        mcast_msg = bytes(mcast_msg, 'utf-8')
         sock.sendto(mcast_msg, (mgroup, mport))
         time.sleep(1)
 
