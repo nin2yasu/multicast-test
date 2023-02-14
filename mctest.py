@@ -50,8 +50,8 @@ def receiver(mgroup):
 
     while True:
         (data, address) = sock.recvfrom(12000)
-         print('Received on ' + mgroup + ' from ' + address[0] + \
-         ' from port ' + str(address[1]) + ': ' + str(data))        
+        print('Received on ' + mgroup + ' from ' + address[0] + \
+        ' from port ' + str(address[1]) + ': ' + str(data))        
 '''
         # Try to unpickle log record from a DatagramHandler
         try:
