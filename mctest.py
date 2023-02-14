@@ -59,9 +59,9 @@ def receiver(mgroup):
 
         # Print message normally
         except Exception as e:
-            print('Exeception', str(e))
+            # print('Exeception', str(e))
             print('Received on ' + mgroup + ' from ' + address[0] + \
-            ' from port ' + str(address[1]) + ': ' + data)
+            ' from port ' + str(address[1]) + ': ' + str(data))
 
 
 def sender(mgroup):
